@@ -10,21 +10,16 @@ from discord.ext import commands
 import logging
 from config import DISCORD_TOKEN
 
-# Logging: nos muestra en consola todo lo que hace el bot
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
 
 # Intents: le decimos a Discord qué permisos necesita el bot.
-# Message content = leer mensajes
-# DMs = hablar en privado con usuarios
 intents = discord.Intents.default()
 intents.message_content = True
 intents.dm_messages = True
 
-# Creamos el bot. El prefix "!" es para comandos tipo !help,
-# pero Sentimentfy usa slash commands (/)
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 
