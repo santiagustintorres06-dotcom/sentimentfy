@@ -1,6 +1,6 @@
 """
 config.py — Configuración central del proyecto.
-Lee las variables de entorno desde el archivo .env
+
 """
 
 import os
