@@ -78,4 +78,4 @@ Si estás en crisis, comunicate con una línea de ayuda profesional.
 - 🌎 Internacional: [findahelpline.com](https://findahelpline.com)
 
 ## Autor
-Tu nombre — [GitHub](https://github.com/tu-usuario)
+Santiago Torres — [GitHub](https://github.com/santiagustintorres06-dotcom)
