@@ -1,14 +1,6 @@
 """
 cogs/sentimentfy.py — El corazón del bot.
 
-En discord.py los 'cogs' son módulos que agrupan comandos relacionados.
-Este cog maneja toda la conversación de Sentimentfy:
-  1. El usuario usa /sentimentfy en un servidor
-  2. El bot le manda un DM privado
-  3. El usuario elige idioma con botones
-  4. Conversación empática + técnicas psicológicas
-  5. El bot pregunta si quiere música y de qué tipo
-  6. Spotify busca canciones y el bot las recomienda
 """
 
 import discord
@@ -17,19 +9,12 @@ from discord import app_commands
 from services.claude_service import chat_with_sentiment
 from services.spotify_service import get_recommendations
 
-# Guardamos el estado de cada conversación activa.
-# La clave es el ID del usuario, el valor es un dict con su estado.
-# Ejemplo: {123456: {"language": "es", "history": [...], "stage": "chatting"}}
 active_sessions = {}
 
 
 # ─── Botones de selección de idioma ──────────────────────────────────────────
 
 class LanguageView(discord.ui.View):
-    """
-    Muestra dos botones al inicio: Español / English.
-    Cuando el usuario clickea uno, arranca la conversación en ese idioma.
-    """
 
     def __init__(self, user_id: int):
         super().__init__(timeout=60)  # Los botones desaparecen en 60 segundos
@@ -47,7 +32,7 @@ class LanguageView(discord.ui.View):
         """Inicializa la sesión del usuario con el idioma elegido."""
         active_sessions[self.user_id] = {
             "language": language,
-            "history": [],   # Historial de la conversación para Claude
+            "history": [],  
             "stage": "chatting"  # Etapas: chatting → music_choice → done
         }
 
