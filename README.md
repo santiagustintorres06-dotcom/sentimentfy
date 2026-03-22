@@ -16,7 +16,7 @@ Bot de Discord que te escucha, te acompaña emocionalmente y te recomienda músi
 
 - **Python 3.10+**
 - **discord.py** — Interfaz con Discord
-- **Anthropic Claude API** — Inteligencia emocional y empatía
+- **Groq API** — Inteligencia emocional y empatía
 - **Spotify Web API** — Recomendaciones musicales reales
 - **pytest** — Testing
 
